@@ -8,7 +8,7 @@ tornado = "*"
 numpy = "*"
 alphalens = "*"
 pandas = "*"
-"psycopg2"= "*"
+"psycopg2-binary"= "*"
 "jinja2" = "*"
 sqlalchemy = "*"
 

@@ -6,10 +6,10 @@ apt install -y python3-pip
 
 apt install -y python3-tk
 
-pip3 install -y pipenv==11.10.0
+pip3 install pipenv==11.10.0
 
 pipenv install --deploy
 
-pipenv run python Calculate.py
+#pipenv run python Calculate.py
 
 pipenv run python hello.py
