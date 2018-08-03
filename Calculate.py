@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # In[1]:
-
+import numpy
 import psycopg2
 import pandas as pd 
 import alphalens as alpha
@@ -391,7 +391,7 @@ backtest('M',1,'2016-12-2','2017-4-3',momentum)
 #backtest('M',1,'2017-4-28','2018-1-2',market_cap)
 #(1 + df_prices['BTC'].loc['2016-5-4':].resample('7D').first().pct_change()).cumprod().plot(figsize = (17,12))
 
-plt.legend(fontsize = 15)
+#plt.legend(fontsize = 15)
 
 
 # In[ ]:

@@ -27,7 +27,6 @@ def check_user(name,passw):
                                   port='5432')
     
     cursor = connection.cursor()
-    passw = hsh.sha1(passw.encode()).hexdigest()
     cursor.execute(
         ("SELECT * FROM user_information "
         "WHERE (username = %(user)s) AND (passwords = %(pass)s);"), 
