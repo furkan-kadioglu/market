@@ -6,6 +6,8 @@ import numpy
 import psycopg2
 import pandas as pd 
 import alphalens as alpha
+from sqlalchemy import create_engine
+
 #get_ipython().run_line_magic('pylab', 'inline')
 
 currency = pd.read_csv('all_currencies.csv',
@@ -251,7 +253,7 @@ def plot_port(date_freq,df_port,cash_port,name):
 
 
 def sql(name,dataFrame):
-    from sqlalchemy import create_engine
+    
     
     dataFrame = (dataFrame
                  .reset_index()
@@ -275,8 +277,9 @@ def sql(name,dataFrame):
     for index, row in dataFrame.iterrows():
         row_dict = row.to_dict()
         row_dict["table_name"] = psycopg2.extensions.AsIs(name)
-        cursor.execute("INSERT INTO %(table_name)s VALUES(%(Date)s, %(Symbol)s, %(Value)s)", row_dict),
-    connection.commit()
+        cursor.execute("INSERT INTO %(table_name)s VALUES(%(Date)s, %(Symbol)s, %(Value)s)", row_dict)
+        connection.commit()
+    
     connection.close()
 
 # In[10]:
@@ -309,7 +312,8 @@ def backtest(freq_test,initial_money,st_date,end_date,weight_func):
         #print(arg)
         #print(dic['df_port'].loc[arg])
         
-    sql('trade',dic['df_trades'])
+    #sql('trade',dic['df_trades'])
+    #print(dic['df_trades']['BTC'])
     #plot_port(range_of_test,dic['df_port'].loc[st_date:end_date],dic['cash_port'].loc[st_date:end_date],weight_func.__name__)
     #return dic['df_port'].loc[st_date:end_date] + dic['cash_port'].loc[st_date:end_date]
 
