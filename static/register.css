@@ -1,0 +1,49 @@
+body {
+    background-color:rgba(0, 0, 0, 0.89);
+}
+.form {
+    font-family: inherit;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    color: rgb(143, 32, 69);
+    background-color:rgba(0, 0, 0, 0);  
+    border-radius: 12px;
+    line-height: 40px;
+    width: 40%;
+    margin: auto;
+}
+input:focus {
+    outline: 0px;
+}
+input {
+    font-family: inherit;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    color: rgb(143, 32, 69);
+    background-color:rgba(0, 0, 0, 0);
+    border-radius: 12px;
+    border: 1px solid rgb(143, 32, 69);
+}
+button {
+    font-family: inherit;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    color: rgb(143, 32, 69);
+    background-color:rgba(0, 0, 0, 0);
+    border: 1px solid rgb(143, 32, 69);
+    border-radius: 12px;
+    height: 40px;
+    width: 50%;
+    
+    
+}
+:focus {
+    outline-color: rgb(143, 32, 69);
+    
+}
