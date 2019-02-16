@@ -1,2 +1,2 @@
-## Market Simiulator
+## Market Simulator
 Market Simulator for cryptocurrencies.
